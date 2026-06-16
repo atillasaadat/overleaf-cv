@@ -1,0 +1,37 @@
+name: Build CV and publish to website
+
+on:
+  push:
+    branches: [main, master]   # match the CV repo's default branch
+  workflow_dispatch:           # lets you run it manually too
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout CV source
+        uses: actions/checkout@v4
+
+      - name: Compile main.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          # latexmk_use_xelatex: true   # uncomment if your CV uses fontspec/custom fonts
+
+      - name: Publish PDF to website repo
+        env:
+          TOKEN: ${{ secrets.WEBSITE_REPO_TOKEN }}
+        run: |
+          git clone --depth 1 \
+            https://x-access-token:${TOKEN}@github.com/atillasaadat/personal_website.git website
+          cp main.pdf website/public/files/Atilla_Saadat_CV.pdf
+          cd website
+          git config user.name "cv-sync-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "CV unchanged — nothing to publish."
+            exit 0
+          fi
+          git add public/files/Atilla_Saadat_CV.pdf
+          git commit -m "chore: update CV from Overleaf"
+          git push
