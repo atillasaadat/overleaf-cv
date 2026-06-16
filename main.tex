@@ -1,0 +1,835 @@
+%-------------------------
+% Atilla Saadat - CV 
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+%\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{accsupp}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+% Keep FontAwesome icons visually, but map their glyphs to spaces in extracted PDF text
+% so ATS systems and PDF parsers do not see icon names such as /globe or /linkedin.
+\pdfglyphtounicode{globe}{0020}
+\pdfglyphtounicode{envelope}{0020}
+\pdfglyphtounicode{linkedin}{0020}
+\pdfglyphtounicode{researchgate}{0020}
+\pdfglyphtounicode{graduation-cap}{0020}
+\pdfglyphtounicode{github}{0020}
+\pdfglyphtounicode{dev}{0020}
+\pdfglyphtounicode{briefcase}{0020}
+\pdfglyphtounicode{wrench}{0020}
+\pdfglyphtounicode{search}{0020}
+\pdfglyphtounicode{trophy}{0020}
+\pdfglyphtounicode{book}{0020}
+\pdfglyphtounicode{file}{0020}
+\pdfglyphtounicode{edit}{0020}
+\pdfglyphtounicode{scroll}{0020}
+\pdfglyphtounicode{desktop}{0020}
+\pdfglyphtounicode{book-reader}{0020}
+\pdfglyphtounicode{university}{0020}
+\pdfglyphtounicode{cogs}{0020}
+\pdfglyphtounicode{certificate}{0020}
+\pdfglyphtounicode{code}{0020}
+\pdfglyphtounicode{users}{0020}
+\pdfglyphtounicode{newspaper}{0020}
+\usepackage{lastpage}
+\usepackage{bookmark}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{comment}
+\usepackage{ragged2e}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\fancyfootoffset[R]{10pt}
+%\fancyfoot[R]{\thepage}
+%\fancyfoot[L]{Atilla Saadat CV}
+%\setlength{\footskip}{40pt}
+\fancyhf{}
+\fancyfoot[R]{\shiftleft{5pt}{\thepage} of \pageref*{LastPage}}
+\fancyfootoffset[R]{10pt}
+\fancyfoot[L]{Atilla Saadat - Curriculum Vitae}
+\setlength{\footskip}{40pt}
+\renewcommand{\footrulewidth}{1pt}%
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.6in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1.19in}
+%\addtolength{\topmargin}{-.7in}
+%\addtolength{\textheight}{1.4in}
+
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\evensidemargin}{-0.4in}
+\addtolength{\textwidth}{0.7in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{0.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\linewidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\shiftleft}[2]{\makebox[0pt][r]{\makebox[#1][l]{#2}}}
+\newcommand{\shiftright}[2]{\makebox[#1][r]{\makebox[0pt][l]{#2}}}
+\newcommand{\cvIcon}[1]{\BeginAccSupp{ActualText={}}#1\EndAccSupp{}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=NavyBlue,
+    pdftitle={Atilla Saadat - CV},
+    }
+
+%-------------------------
+% Fix PDF bookmarks: strip FontAwesome icons and \shiftleft from bookmark strings
+% so PDF readers show clean section names in their outline/sidebar.
+%-------------------------
+\pdfstringdefDisableCommands{%
+  \def\shiftleft#1#2{}%
+  \def\faGraduationCap{}%
+  \def\faBriefcase{}%
+  \def\faWrench{}%
+  \def\faSearch{}%
+  \def\faTrophy{}%
+  \def\faBook{}%
+  \def\faFile{}%
+  \def\faEdit{}%
+  \def\faScroll{}%
+  \def\faDesktop{}%
+  \def\faBookReader{}%
+  \def\faUniversity{}%
+  \def\faCogs{}%
+  \def\faCertificate{}%
+  \def\faCode{}%
+  \def\faUsers{}%
+  \def\faNewspaper{}%
+  \def\faGlobe{}%
+  \def\faEnvelope{}%
+  \def\faLinkedin{}%
+  \def\faResearchgate{}%
+  \def\faGithub{}%
+  \def\faDev{}%
+  \def\faPhone{}%
+}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    %{\Huge \scshape \textbf{\href{https://atillasaadat.com}{\textcolor{nblue}{Atilla Saadat}}}} \\
+    {\Huge \textbf{Atilla Saadat}} \\
+    \vspace{5pt}
+    Los Angeles, CA, USA \\ \vspace{1pt}
+    U.S. Permanent Resident (Green Card via EB1A Extraordinary Ability Visa) \\ \vspace{1pt}
+    %\small \raisebox{-0.1\height}\faPhone\ 226-506-3830 ~
+    \href{https://atillasaadat.com?source=CV}{\raisebox{-0.0\height}{\cvIcon{\faGlobe}}\
+    \underline{atillasaadat.com}} ~ 
+    \href{mailto:atillaabc@gmail.com}{\raisebox{-0.0\height}{\cvIcon{\faEnvelope}}\  \underline{atillaabc@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/atillasaadat/}{\raisebox{-0.0\height}{\cvIcon{\faLinkedin}}\ \underline{LinkedIn}}  \\
+    \vspace{2pt}
+    \href{https://www.researchgate.net/profile/atilla-saadat}{\raisebox{-0.0\height}{\cvIcon{\faResearchgate}}\
+    \underline{ResearchGate}} ~ 
+    \href{https://scholar.google.com/citations?user=LDy19UwAAAAJ&hl=en}{\raisebox{-0.0\height}{\cvIcon{\faGraduationCap}}\
+    \underline{Google Scholar}} ~ 
+    \href{https://github.com/atillasaadat}{\raisebox{-0.0\height}{\cvIcon{\faGithub}}\
+    \underline{Github}}  ~
+    \href{https://devpost.com/atillasaadat}{\raisebox{-0.0\height}{\cvIcon{\faDev}}\
+    \underline{Devpost}}
+    \vspace{-8pt}
+\end{center}
+
+% %-----------Research Profile-----------
+% \section[Research Profile]{\shiftleft{18pt}{\cvIcon{\faSearch}}Research Profile}
+% \begin{itemize}[leftmargin=0.15in, label={}]
+%   \small{\item{
+%   Spacecraft GNC engineer and applied autonomy researcher focused on flight-proven guidance, navigation, control, state estimation, trajectory optimization, and embedded spacecraft software. Research interests include autonomous space systems, numerical optimization, dynamics, controls, state estimation, distributed satellite operations, and resource-constrained onboard autonomy. I aim to develop algorithms and flight-ready systems that make spacecraft more autonomous, agile, reliable, and capable in uncertain operational environments.
+%   }}
+% \end{itemize}
+% \vspace{-8pt}
+
+%-----------Industry Experience-----------
+\section[Industry Experience]{\shiftleft{18pt}{\cvIcon{\faBriefcase}}Industry Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Spacecraft Guidance, Navigation, \& Control (GNC) Engineer II}{Nov 2025 -- Present}
+      {\href{https://varda.com/}{Varda Space Industries}}{Los Angeles, CA}
+      \resumeItemListStart
+       \resumeItem{Led Monte Carlo analysis, trajectory design optimization, post-flight reconstruction, and on-orbit GNC operations for W-Series 4 and post-flight analysis for the \href{https://www.linkedin.com/posts/varda-space-industries_w-5s-reentry-is-extra-special-because-it-activity-7422823584055762944-STFG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqGFVoB5B1Go43jLQbXrXjvLyltT_iN1_c}{successful launch and reentry of W-Series 5}, connecting simulation, flight data, and operational decision-making for reentry vehicle missions}
+       \resumeItem{Serving as GNC Responsible Engineer for Bus Block 2 (W-Series 8 and W-Series 9), architecting next-generation reentry vehicle GNC capabilities for multi-vehicle operations, increased mission cadence, and more autonomous flight operations}
+      \resumeItemListEnd
+    \resumeSubheading
+      {\href{https://www.atillasaadat.com/post/gnc-engineer-turion-space}{Spacecraft Guidance, Navigation, \& Control (GNC) Engineer}}{Oct 2022 -- Nov 2025}
+      {\href{https://turionspace.com/}{Turion Space Corp.}}{Irvine, CA}
+      \resumeItemListStart
+        \resumeItem{Led GNC engineering for \href{https://www.satcat.com/sats/56965}{Droid.001} and \href{https://www.satcat.com/sats/63223}{Droid.002} from concept through launch, commissioning, and on-orbit operations on SpaceX \href{https://www.spacex.com/launches/mission/?missionId=transporter-8}{Transporter-8} and \href{https://www.spacex.com/launches/mission/?missionId=transporter13}{Transporter-13}. Developed V\&V methods spanning pointing budgets, power generation analysis, on-orbit diagnostics, and flight-data validation, achieving \textless0.05° (2$\sigma$) and \textless6" (2$\sigma$) pointing accuracy for Space Situational Awareness (SSA) and Non-Earth Imaging (NEI) missions, respectively.}
+        \resumeItem{Designed and implemented a Python-based autonomous NEI target tracking and mission-planning algorithm for inter-satellite imaging, optimizing attitude profiles while enforcing Sun/Earth exclusion constraints and enabling more than \href{https://www.linkedin.com/posts/turion-space_on-6122023-we-launched-droid001-today-activity-7433224838242254848-lnU4?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqGFVoB5B1Go43jLQbXrXjjvLyltT_iN1_c}{\textbf{1{,}022 successful tasking collects and 26{,}467 high-precision images}} across Droid.001 and Droid.002.}
+        \resumeItem{Built high-fidelity spacecraft simulations with Hardware/Software-in-the-Loop (HITL/SITL) capabilities to validate autonomous inter-satellite imaging operations, evaluate mission design trades, and prototype novel concepts of operations. Conducted Monte Carlo success analyses and calibrated body-frame imagers in orbit using star field imagery to ensure sub-arcminute NEI pointing alignment.}
+        \resumeItem{Implemented batch least squares orbit determination from on-orbit MEKF state estimates, uploading refined ephemeris to Space-Track for conjunction analysis and maneuver planning. Verified LEO ADCS torque/momentum authority and executed power-compliant pointing campaigns, advancing GNC autonomy across Turion's SSA and NEI mission portfolio.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Hardware Functional Safety Engineering Intern}{May 2022 -- Sept 2022}
+      {\href{https://www.nvidia.com/en-us/self-driving-cars/safety/}{NVIDIA Corp.}}{Santa Clara, CA}
+      \resumeItemListStart
+        \resumeItem{
+        Developed Python software to automate Fault Tree Analysis (FTA) for over 100,000 failure modes, significantly improving failure analysis efficiency. Applied in production for \href{https://developer.nvidia.com/embedded/jetson/jetson-safety}{Mercedes-Benz × NVIDIA's Jetson AGX Orin SoC} for autonomous vehicles functional safety engineering}
+        \resumeItem{Ensured functional safety engineering standards were maintained via FTA for autonomous vehicle development at NVIDIA, following \href{https://en.wikipedia.org/wiki/ISO_26262}{ISO 26262} Road Vehicles Functional Safety standards}
+      \resumeItemListEnd
+    \resumeSubheading
+      {\href{https://www.atillasaadat.com/post/mujin-inc-internship-dynamics-identification-for-industrial-robotics}{Robotic Controls Engineering Intern II}}{Sept 2019 -- Jan 2020}
+      {\href{https://mujin-corp.com/}{Mujin Inc.}}{Tokyo, Japan}
+      \resumeItemListStart
+        \resumeItem{Developed a torque model validation algorithm with tailored metrics and fault detection, improving torque coefficient estimate confidence by over 70\%}
+        \resumeItem{Engineered a dynamics identification technique for the Mujin Controller, optimizing torque model coefficient calculations for production robots across Mujin's industrial fleet}
+        \resumeItem{Collaborated with Mujin's legal department to file \href{https://patents.google.com/?inventor=Atilla+SAADAT+DEHGHAN}{2 proprietary software patents}, now active in the USA and Japan with pending approval in China}
+      \resumeItemListEnd
+    \resumeSubheading
+      {\href{https://www.atillasaadat.com/post/mujin-inc-internship-dynamics-identification-for-industrial-robotics}{Robotic Controls Engineering Intern I}}{May 2017 -- May 2018}
+      {\href{https://mujin-corp.com/}{Mujin Inc.}}{Tokyo, Japan}
+      \resumeItemListStart
+        \resumeItem{Designed a dynamics identification technique for the Mujin Controller, computing Friction, Center of Mass, and Inertia tensor coefficients to enhance robot torque modeling accuracy}
+        \resumeItem{Developed and deployed production-grade code validated against experimental results, improving robot performance under high acceleration scenarios by over 85\%}
+        \resumeItem{Integrated robot armature trajectory generation with data analytics and custom UX/UI visualizations, streamlining operator workflows and improving system observability}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Space Systems Engineering Intern (Lunar Exploration)}{May 2016 -- Sept 2016}
+      {\href{https://www.canadensys.com/space-exploration/586-2/}{Canadensys Aerospace Corp.}}{Toronto, Ontario}
+      \resumeItemListStart
+        \resumeItem{Led development of a remotely-operated lunar rover prototype integrating multiple camera modalities (3D, stereo, and fisheye) within a \$10k+ budget, supporting lunar surface exploration objectives}
+        \resumeItem{Designed and integrated a ground station GUI combining real-time camera feed visualization with vehicle command and control, improving operational efficiency for remote rover operations}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------EDUCATION-----------
+\section[Education]{\shiftleft{18pt}{\cvIcon{\faGraduationCap}}Education}
+  \vspace{5pt}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+        {M.S. - Computer Science}{Jan 2025 - Present}
+        {Georgia Institute of Technology}{Atlanta, Georgia}
+        \resumeItemListStart
+            \resumeItem{Specialization: Artificial Intelligence; coursework and projects emphasize deep learning, reinforcement learning, robotics AI, and space computing for autonomous aerospace systems}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+        {M.A.Sc. - Aerospace Science \& Engineering}{Sept 2020 -- Aug 2022}
+        {University of Toronto}{Toronto, Ontario}
+        \resumeItemListStart
+            \resumeItem{Spacecraft Systems Engineering and Attitude Determination \& Control Systems (ADCS) research and development at the \href{https://sflmissions.com}{UTIAS Space Flight Laboratory (SFL)}}
+            \resumeItem{Thesis: \href{https://doi.org/1807/125667}{Design and Test Optimizations for Spacecraft Attitude Determination and Control Subsystems}}
+            \resumeItem{Research Advisor: Dr. Robert E. Zee}
+            \resumeItem{Awarded Research Fellowship \& Internal Student Fellowship. Graduated with ``High Distinction''}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+        {B.A.Sc. - Honour's Mechanical Engineering w/ Aerospace Option}{Sept 2015 - Aug 2020}
+        {University of Windsor}{Windsor, Ontario}
+        \resumeItemListStart
+            \resumeItem{Aerospace ML Researcher at the \href{https://www.arahimi.ca/lab}{Intelligent Control, Analysis, and Modeling (iCAM) Lab}}
+            \resumeItem{Research Advisor: \href{https://www.arahimi.ca}{Dr. Afshin Rahimi}}
+            \resumeItem{3x Dean's List}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------Technical Skills-----------
+\section[Technical Skills]{\shiftleft{18pt}{\cvIcon{\faWrench}}Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Research Areas:}{ Spacecraft GNC, ADCS, state estimation, numerical optimization, trajectory optimization, orbit determination, autonomous mission planning, embedded spacecraft systems, CubeSats, distributed space systems, robotics, machine learning} \\
+     \vspace{2pt}
+     \textbf{Languages:}{ Python, MATLAB/Simulink, C/C++, Java, JavaScript, PHP, HTML/CSS, NASA JPL F Prime} \\
+     \vspace{2pt}
+     \textbf{Engineering Tools:}{ AGI STK, FreeFlyer, GMAT, Basilisk, OpenC3 COSMOS, SolidEdge, Siemens NX w/ Space Systems Thermal, SolidWorks, Catia V5, KiCad, Altium} \\
+     \vspace{2pt}
+     \textbf{ML/Scientific Computing:}{ NumPy, SciPy, Matplotlib, Plotly, Scikit-learn, OpenCV, TensorFlow, Keras, TSfresh, Hyperopt, pandas, PyTorch} \\
+     \vspace{2pt}
+     \textbf{Developer Tools:}{ Linux, Git, Bash, Docker, PyTest, Google Cloud Platform, AWS, MongoDB, MySQL, PostgreSQL, VS Code, Eclipse, Android Studio, \LaTeX} \\
+     \vspace{2pt}
+     \textbf{Fabrication and Lab:}{ 3D printing, MIG/TIG/Stick welding, wire harnessing, multimeters, oscilloscopes, ESD compliance, SMT soldering, Raspberry Pi/Arduino/BBB} \\
+    }}
+\end{itemize}
+\vspace{-5pt}
+
+%-----------Research Experience-----------
+\newpage
+\section[Research Experience]{\shiftleft{18pt}{\cvIcon{\faSearch}}Research Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Graduate Researcher}{Sept 2020 -- Sept 2022}
+      {\href{https://sflmissions.com/}{UTIAS Space Flight Laboratory}}{University of Toronto}
+      \resumeItemListStart
+        \resumeItem{Automated ADCS hardware testing (rate sensors, magnetometers, magnetorquers, fine sun sensors, reaction wheels) across 16 satellites in the \href{https://sflmissions.com/hawkeye-360-cluster-7/}{HawkEye 360 constellation}, reducing test time by 63\% through Python software, hardware workflow redesign, and repeatable V\&V methods that improved data quality and flight-readiness evidence}
+        \resumeItem{Developed a novel Earth horizon sensor using a repurposed spacecraft inspection camera, achieving 1° RMSE nadir vector estimation via Python/OpenCV image processing and validating the method against STK EOIR simulation and on-orbit NorSat-2 imagery. Presented at the \href{https://smallsat.org/students/previous-winners/}{2022 Small Satellite Conference}, winning \textbf{1st place} in the student competition}
+        \resumeItem{Developed an in-situ inertia tensor estimation method for on-orbit satellites, validated through MATLAB/Simulink ADCS simulation, and implemented novel reaction-wheel attitude commands in C++ flight code for the HawkEye 360 mission. Related conference paper selected by the Canadian Space Agency (CSA) as one of two Canadian delegate submissions to the \href{https://iafastro.directory/iac/browse/IAC-22/E2/2/}{IAC 2022 E2 Student Conference}}
+        \resumeItem{Built a model-based solar power generation analysis tool in Python and STK for \href{https://sflmissions.com/starburst/}{NASA MSFC's StarBurst mission}, incorporating photovoltaic self-shadowing effects from the SolidEdge CAD model. Automated analysis across 135+ attitude and orbital cases with shadowed string thresholding, producing high-fidelity power budget reports}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Researcher}{Mar 2019 -- Oct 2020}
+      {\href{https://www.researchgate.net/lab/Intelligent-Control-Analysis-and-Modeling-iCAM-Lab-Afshin-Rahimi}{Intelligent Control, Analysis, and Modeling (iCAM) Laboratory}}{University of Windsor}
+      \resumeItemListStart
+        \resumeItem{Developed a novel ensemble-based ML algorithm for fault detection in satellite reaction wheels, leveraging scikit-learn, TensorFlow, and Keras for fault case classification and feature extraction}
+        \resumeItem{Conducted time-series data analysis research, optimizing dataset generation and establishing best practices for feature extraction in ML-based fault diagnosis applications}
+        \resumeItem{Co-authored published papers and conference presentations advancing the field of intelligent control and fault diagnosis for spacecraft systems}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------Awards-----------
+\section[Awards]{\shiftleft{18pt}{\cvIcon{\faTrophy}}Awards}
+    \vspace{2pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\href{https://www.atillasaadat.com/post/mit-storm-ai-challenge}{\textbf{4th Place in MIT STORM-AI Challenge}} $|$ \emph{\href{https://aeroastro.mit.edu/arclab/}{Massachusetts Institute of Technology (MIT) ARClab}}}{Jul 2025}
+            \resumeItemListStart
+            \resumeItem{Built a metric-aligned BiGRU-Attention model for real-time 72-hour thermospheric density forecasts, exceeding transformer baselines at millisecond latency and demonstrating ML-enabled autonomy for space situational awareness and onboard planning}
+            \resumeItemListEnd
+            \vspace{-4pt}
+        \resumeProjectHeading
+            {\href{https://payloadspace.com/atilla-saadat-turion-space/}{\textbf{Payload Pioneer 30 under 30 Award}} $|$ \emph{\href{https://payloadspace.com/category/payload-pioneers-2024/}{Payload Space}}}{Oct 2024}
+            \resumeItemListStart
+            \resumeItem{Recognized by Payload's ``30 under 30''  for achievements across the space industry, including innovation, advocacy, and leadership}
+            \resumeItemListEnd
+            \vspace{-4pt}
+        \resumeProjectHeading
+            {\href{https://www.sspi.org/atilla-saadat}{\textbf{SSPI 20 under 35 Award}} $|$ \emph{\href{https://www.sspi.org/}{Space \& Satellite Professionals International (SSPI)}}}{Sept 2024}
+            \resumeItemListStart
+            \resumeItem{Recognized by SSPI's ``20 under 35'' for outstanding contributions and leadership in the space industry}
+            \resumeItemListEnd
+            \vspace{-4pt}
+        \resumeProjectHeading
+            {\href{https://smallsat.org/students/previous-winners/}{\textbf{1\textsuperscript{st} place in Frank J. Redd Student Competition}} $|$ \emph{\href{https://smallsat.org/}{Small Satellite Conference}}}{Aug 2022}
+            \resumeItemListStart
+            \resumeItem{Awarded \$10k for \href{https://digitalcommons.usu.edu/smallsat/2022/all2022/3/}{best paper} and presentation in an international student competition}
+            \resumeItemListEnd
+            \vspace{-4pt}
+        \resumeProjectHeading
+            {\textbf{Canadian Delegate in \href{https://iafastro.directory/iac/browse/IAC-22/E2/2/}{IAC Student Conference}} $|$ \emph{\href{https://www.asc-csa.gc.ca/eng/}{Canadian Space Agency (CSA)}}}{Aug 2022}
+            \resumeItemListStart
+            \resumeItem{Selected as 1 of 2 students across Canada to attend the IAC 2022 50th Student Conference by the CSA}
+            \resumeItemListEnd
+            \vspace{-4pt}
+      \resumeProjectHeading
+          {\textbf{Research Fellowship \& Internal Student Fellowship} $|$ \emph{\href{https://www.utias.utoronto.ca/}{University of Toronto}}}{Sept 2020}
+          \resumeItemListStart
+            \resumeItem{Awarded fully-funded tuition and stipend for admittance into \href{https://sflmissions.com/}{UTIAS Space Flight Laboratory}}
+          \resumeItemListEnd
+          \vspace{-4pt}
+      \resumeProjectHeading
+          {\textbf{\href{https://www.linkedin.com/pulse/abb-quebec-city-host-csdc-workshop-design-reviews-lawrence-reeves}{1\textsuperscript{st} place team} in CSDC Critical Design Review} $|$ \emph{\href{https://csdcms.ca}{Canadian Satellite Design Challenge (CSDC)}}}{Oct 2019}
+          \resumeItemListStart
+            \resumeItem{Presented CDR-level designs for a 3U Cube Satellite to CSA, MDA, and ABB spacecraft engineers}
+          \resumeItemListEnd
+          \vspace{-4pt}
+      \resumeProjectHeading
+          {\textbf{Ontario Aerospace Council Scholarship} $|$ \emph{\href{https://theoac.ca/}{Ontario Aerospace Council}}}{May 2019}
+          \resumeItemListStart
+            \resumeItem{Awarded 1 of 4 awards to Ontario aerospace engineering students for academic and extra-curricular achievements related to aerospace studies}
+          \resumeItemListEnd
+          \vspace{-4pt}
+          \newpage
+      \resumeProjectHeading
+          {\textbf{ESA CryoSat-2 Science Meeting Student Award} $|$ \emph{\href{https://www.asc-csa.gc.ca/}{Canadian Space Agency (CSA)}}}{Mar 2017}
+          \resumeItemListStart
+            \resumeItem{Awarded to select students across Canada to attend ESA CryoSat-2 meeting as student representatives for the CSA, used for research and resources for \href{https://www.atillasaadat.com/post/cryoroute-globally-optimized-naval-routes-in-north-arctic-ocean}{CryoRoute}}
+          \resumeItemListEnd
+          \vspace{-4pt}
+      \resumeProjectHeading
+          {\textbf{P.E.O. Windsor-Essex Chapter Bursary} $|$ \emph{\href{http://www.windsoressex.peo.on.ca/}{Professional Engineers of Ontario (P.E.O)}}}{Mar 2016}
+          \resumeItemListStart
+            \resumeItem{Awarded to 1\textsuperscript{st} year engineering students who have demonstrated excellent academic achievement}
+          \resumeItemListEnd
+          \vspace{-4pt}
+      \resumeProjectHeading
+          {\textbf{Dean of Engineering Conference Grant} $|$ \emph{University of Windsor}}{Jan 2019}
+          \resumeItemListStart
+            \resumeItem{Awarded directly by the Dean of Engineering to attend the ESA Atlantic from Space Workshop}
+          \resumeItemListEnd
+          
+    % \resumeSubheading
+    %   {Various University of Windsor Scholarships \& Bursaries}{}
+    %   {\textrm{Awarded for undergraduate academic achievement and extra-curricular activities, unless otherwise stated:}}{}
+    %   \resumeItemListStart
+    %     \resumeItem{Student Access Bursary $|$ \$1800 $|$ Jun 2020 \& Jun 2019}
+    %     \resumeItem{Ontario First Generation Bursary $|$ \$900 $|$ Jun 2019 \& Sept 2018}
+    %     \resumeItem{UWindsor In-Course Bursary $|$ \$250 $|$ Jun 2019}
+    %     \resumeItem{Student Life Enhancement Fund $|$ \$1000 $|$ Jan 2019 $|$ Awarded to attend ESA Atlantic from Space Workshop}
+    %     \resumeItem{Helen Norma Laframboise Scholarship $|$ \$2000 $|$ Sept 2018}
+    %     \resumeItem{Faculty Retirees' Scholarship $|$ \$1800 $|$ Sept 2018}
+    %     \resumeItem{Ontario Student Opportunity Trust Fund (OSOTF) Scholarship $|$ \$1100 $|$ Sept 2018}
+    %     \resumeItem{Marian McLean Campus Spirit Scholarship $|$ \$1100 $|$ Sept 2018 $|$ Awarded for WinSAT event's held on campus}
+    %     \resumeItem{International COOP Bursary $|$ \$750 $|$ Jan 2018  $|$ Awarded for having a COOP Internship in Japan}
+    %     \resumeItem{Duronio Family Scholarship $|$ \$1300 $|$ Jan 2017}
+    %     \resumeItem{Golden Key International Honour Society (Nomination) $|$ Sept 2016}
+    %     \resumeItem{University of Windsor Entrance Scholarship $|$ \$1000 $|$ Sept 2015}
+    %   \resumeItemListEnd
+    \resumeSubheading
+      {University of Windsor Scholarships \& Bursaries}{}
+      {\textrm{\$16k total - Awarded for undergraduate academic achievement and extra-curricular activities, unless otherwise stated:}}{}
+      \resumeItemListStart
+        \resumeItem{Student Access Bursary $|$ Jun 2020 \& Jun 2019}
+        \resumeItem{Ontario First Generation Bursary $|$ Jun 2019 \& Sept 2018}
+        \resumeItem{UWindsor In-Course Bursary $|$ Jun 2019}
+        \resumeItem{Student Life Enhancement Fund $|$ Jan 2019 $|$ Awarded to attend ESA Atlantic from Space Workshop}
+        \resumeItem{Helen Norma Laframboise Scholarship $|$ Sept 2018}
+        \resumeItem{Faculty Retirees' Scholarship $|$ Sept 2018}
+        \resumeItem{Ontario Student Opportunity Trust Fund (OSOTF) Scholarship $|$ Sept 2018}
+        \resumeItem{Marian McLean Campus Spirit Scholarship $|$ Sept 2018 $|$ Awarded for WinSAT events held on campus}
+        \resumeItem{International COOP Bursary $|$ Jan 2018  $|$ Awarded for Mujin Inc. internship in Japan}
+        \resumeItem{Duronio Family Scholarship $|$ Jan 2017}
+        \resumeItem{Golden Key International Honour Society (Nomination) $|$ Sept 2016}
+        \resumeItem{University of Windsor Entrance Scholarship $|$ Sept 2015}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------Master's Thesis-----------
+\section[Master's Thesis]{\shiftleft{18pt}{\cvIcon{\faGraduationCap}} Master's Thesis}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+    \item{\textbf{Saadat, A.} (2022). \emph{Design and Test Optimizations for Spacecraft Attitude Determination and Control Subsystems}. Master's thesis, University of Toronto Institute for Aerospace Studies, Space Flight Laboratory. \href{https://doi.org/1807/125667}{doi:10.1807/125667}}
+    }
+ \end{itemize}
+
+%-----------Peer-Reviewed Journal Articles-----------
+\section[Peer-Reviewed Journal Articles]{\shiftleft{18pt}{\cvIcon{\faBook}} Peer-Reviewed Journal Articles}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+    \item{Rahimi, A., \& \textbf{Saadat, A.} (March, 2020). Fault isolation of reaction wheels onboard three-axis controlled in-orbit satellite using ensemble machine learning. \emph{\href{https://www.springer.com/journal/42401}{Aerospace Systems}}, 3(2), 119-126. \href{https://doi.org/10.1007/s42401-020-00046-x}{doi.org/10.1007/s42401-020-00046-x}}
+    }
+ \end{itemize}
+
+%-----------Publications-----------
+\section[Conference Proceedings \& Presentations]{\shiftleft{18pt}{\cvIcon{\faFile}}Conference Proceedings \& Presentations}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+
+    \item{\textbf{Saadat, A.}, V. Bhosale, K. Bhardwaj, A. Gavrilovska (January, 2027). An Adaptive Telemetry Probe for Resource-Constrained Spacecraft Using F Prime. \emph{AIAA SciTech Forum 2027}, Orlando, FL. (\textit{Submitted})}
+
+    \item{\textbf{Saadat, A.}, V. Chen, J. Austin (September, 2025). End-to-End Autonomous Mission Planning and Spacecraft Attitude Optimization for Resident Space Object Imaging. \href{https://amostech.space/year/2025/end-to-end-autonomous-mission-planning-and-spacecraft-attitude-optimization-for-resident-space-object-imaging/}{\emph{Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference 2025}}, Maui, HI.} \href{https://www.researchgate.net/publication/395773467_End-to-End_Autonomous_Mission_Planning_and_Spacecraft_Attitude_Optimization_for_Resident_Space_Object_Imaging}{[PDF]}
+
+    
+    \item{\textbf{Saadat, A.} Attitude Determination with Self-Inspection Cameras Repurposed as Earth Horizon Sensors.\\\emph{\href{https://smallsat.org/students/student-competition/}{Frank J. Redd Student Competition - Small Satellite Conference 2022}}, Utah State University, Logan, Utah. \\(\href{https://smallsat.org/students/previous-winners}{1\textsuperscript{st} Place Paper and Presentation})} \href{https://digitalcommons.usu.edu/smallsat/2022/all2022/3/}{[PDF]}
+        
+    \item{\textbf{Saadat, A.} On-orbit Spacecraft Inertia Tensor Estimation. \emph{\href{https://iac2022.org/}{International Astronautical Congress 2022}}, Paris, France. \href{https://www.researchgate.net/publication/365595291_On-orbit_Spacecraft_Inertia_Tensor_Estimation}{[PDF]}}
+    
+    \item{Folami, F.O., Rahimi, A. \& \textbf{Saadat, A.} (March, 2020). Fault Isolation of Reaction Wheels on-board 3-axis Controlled in-orbit Satellite Using Machine Learning Techniques. IAC-20.B4.9-GTS.5.10, \emph{\href{https://www.iafastro.org/events/iac/iac-2020/}{International Astronautical Congress 2020}}, Dubai (Online), United Arab Emirates. \href{https://www.researchgate.net/publication/344676787_Fault_Isolation_of_Reaction_Wheels_onboard_3-axis_Controlled_in-orbit_Satellite_Using_Machine_Learning_Techniques}{[PDF]}}
+    
+    \item{Rahimi, A., \& \textbf{Saadat, A.} (July, 2019). Fault isolation of reaction wheels on-board 3-axis controlled in-orbit satellite using ensemble machine learning techniques} \emph{\href{https://www.utias.utoronto.ca/icasse/}{The International Conference on Aerospace System Science and Engineering}}, Toronto, ON. \href{https://www.researchgate.net/publication/336106932_Fault_Isolation_of_Reaction_Wheels_Onboard_3-axis_Controlled_In-orbit_Satellites_Using_Ensemble_Machine_Learning_Techniques}{[PDF]}
+    
+    }
+ \end{itemize}
+
+%-----------Technical Reports-----------
+\section[Technical Reports]{\shiftleft{18pt}{\cvIcon{\faEdit}}Technical Reports}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+
+    \item{\textbf{Saadat, A.}, Weeratunga, M., Hasan, M., \& Mehroke, A.  
+    Reconstructing ESA Time-Series Trojans via Fourier-Regularized Deep Learning.  
+    Technical Report, CS7643 Deep Learning Final Report, Georgia Institute of Technology, July 2025.  
+    DOI: \href{http://dx.doi.org/10.13140/RG.2.2.17228.68480}{10.13140/RG.2.2.17228.68480}.  
+    \href{https://www.researchgate.net/publication/395025516}{[PDF]}}
+
+    \item{\textbf{Saadat, A.}  
+    Real-Time Thermospheric Density Forecasting with a Metric-Aligned BiGRU-Attention Network for Space Situational Awareness.  
+    Technical Report, MIT ARCLab AI Competition, May 2025.  
+    \href{https://www.researchgate.net/publication/393786213}{[PDF]}}
+
+    }
+ \end{itemize}
+
+%-----------Patents and Patent Applications-----------
+\section[Patents]{\shiftleft{20pt}{\cvIcon{\faScroll}}Patents}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{\textbf{Saadat. A}, \& Usui, K. (May, 2020). Method And Computing System For Estimating Parameter For Robot Operation. Patent applications in USA (\href{https://patents.google.com/patent/US20210347049A1/en}{Active}), Japan (\href{https://patents.google.com/patent/JP7098124B2/en}{Active}), and China (\href{https://patents.google.com/patent/CN113924192A/en}{Pending})}
+    \item{\textbf{Saadat. A}, \& Usui, K. (May, 2020). Method And Computing System For Determining A Value Of An Error Parameter Indicative Of Quality Of Robot Calibration. Patent applications in USA (\href{https://patents.google.com/patent/US20210347054A1/en}{Active}), Japan (\href{https://patents.google.com/patent/JP7076756B2/en}{Active}), and China (\href{https://patents.google.com/patent/CN113939783A/en}{Pending})}
+    }
+ \end{itemize}
+\vspace{-10pt}
+
+
+%-----------Poster Presentations-----------
+\section[Poster Presentations]{\shiftleft{19pt}{\cvIcon{\faDesktop}}Poster Presentations}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+    \item{\textbf{Saadat, A.}, V. Chen, J. Austin (September, 2025). \href{https://www.researchgate.net/publication/395773552_End-to-End_Autonomous_Mission_Planning_and_Spacecraft_Attitude_Optimization_for_Resident_Space_Object_Imaging_Motivation_and_Objectives}{End-to-End Autonomous Mission Planning and Spacecraft Attitude Optimization for Resident Space Object Imaging}.\newline\href{https://amostech.com/}{\emph{Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference 2025}}, Maui, HI}
+
+    \item{\textbf{Saadat, A.} (March, 2019). \href{https://www.atillasaadat.com/post/cryoroute-globally-optimized-naval-routes-in-north-arctic-ocean}{CryoRoute - Generating Globally-Optimized Naval Routes in Arctic Ocean.}} \href{https://scholar.uwindsor.ca/uwilldiscover/}{\emph{UWillDiscover Conference}}, University of Windsor, Windsor, ON
+    
+    \item{\textbf{Saadat, A.} (January, 2019). \href{https://www.atillasaadat.com/post/cryoroute-globally-optimized-naval-routes-in-north-arctic-ocean}{CryoRoute - Generating Globally-Optimized Naval Routes in the Arctic Ocean.}} \\ \href{https://eo4society.esa.int/resources/atlantic-from-space-2019/}{\emph{ESA's Atlantic from Space Workshop}}, National Oceanographic Centre, South Hampton, UK
+    }
+ \end{itemize}
+\vspace{-15pt}
+
+
+%-----------Judging ----------
+\section[Academic Reviews]{\shiftleft{20pt}{\cvIcon{\faBookReader}}Academic Reviews}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \item{Judge for \href{https://aiaa.org/events/2025-region-vi-student-conference/}{AIAA Region VI Student Conference 2025}}
+ \end{itemize}
+\vspace{-15pt}
+
+%------RELEVANT COURSEWORK-------
+\section[Completed Graduate-level Courses]{\shiftleft{18pt}{\cvIcon{\faUniversity}}Completed Graduate-level Courses}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{3}
+            \begin{itemize}[itemsep=-3pt, parsep=3pt]
+                \item\small Microsatellite Design I \& II
+                \item\small Spacecraft Dynamics \& Control
+                \item\small Computational Optimization
+                \item\small Control Theory
+                \item\small Flight Dynamics \& Control
+                \item\small Aerospace Structures
+                \item\small Aerodynamics \& Performance
+                \item\small Aerospace Propulsion
+                \item\small Aerospace Materials \& Mfg.
+                \item\small \href{https://omscs.gatech.edu/cs-7643-deep-learning}{CS-7643 Deep Learning}
+                \item\small \href{https://omscs.gatech.edu/cs-7638-robotics-ai-techniques}{CS-7638 Robotics: AI Techniques}
+                \item\small \href{https://omscs.gatech.edu/cs-7641-machine-learning}{CS-7641 Machine Learning}
+                \item\small \href{https://omscs.gatech.edu/cs-7642-reinforcement-learning}{CS-7644 Reinforcement Learning}
+                \item\small CS-8903 Space Computing
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+\vspace{5pt}
+
+\section[Co-Curricular Experience and Projects]{\shiftleft{20pt}{\cvIcon{\faCogs}}Co-Curricular Experience and Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.atillasaadat.com/post/mit-storm-ai-challenge}{Real-Time Spacecraft Thermospheric Density Forecasting}}{May 2025}
+      {\href{https://aeroastro.mit.edu/arclab/}{MIT Astrodynamics, Space, Robotics, and Controls Laboratory (ARCLab)}}{}
+      \resumeItemListStart
+        \resumeItem{Developed and open-sourced a PyTorch BiGRU-Attention model that converts 60 days of solar-wind and orbital data into 72-hour, 10-minute-step thermospheric density forecasts in milliseconds, training in \(\leq4\)h on a single RTX 3090 Ti}
+        \resumeItem{Ranked \textbf{4th out of 159 participants} (0.709 normalized skill score, exceeding the transformer baseline) and achieved the highest paper score in the MIT ARCLab STORM-AI Competition, delivering a deployable real-time solution for drag prediction and collision-risk screening}
+      \resumeItemListEnd
+    \resumeSubheading
+      {President / Founder / Lead Space Systems Engineer}{2018 -- 2020}
+      {\href{https://web.archive.org/web/20250101130253/https://www.winsat.ca/}{University of Windsor Space \& Aeronautics Team (WinSAT)}}{}
+      \resumeItemListStart
+        \resumeItem{Founded WinSAT and led the team to \href{https://www.linkedin.com/pulse/abb-quebec-city-host-csdc-workshop-design-reviews-lawrence-reeves}{\textbf{1st place}} in the \href{https://csdcms.ca}{Canadian Satellite Design Challenge (CSDC)} Critical Design Review, directing design and development of a 3U CubeSat for LEO while managing 20+ students and securing over \$40k in funding}
+        \resumeItem{Led end-to-end development of all satellite subsystems including Attitude Determination \& Control, RF Communications, and Structural \& Thermal, driving cross-disciplinary integration across a multidisciplinary team}
+        \resumeItem{Organized and led educational workshops on satellite engineering and Amateur Radio Operator certification for 30+ students, expanding hands-on technical capacity within the university community}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Lead Avionics Engineering - Sounding Rocket}{2015 -- 2019}
+      {\href{https://web.archive.org/web/20240520164506/https://www.winsat.ca/rocketry}{WinSAT Rocketry Payload Division for UWindsor Rocketry Team}}{}
+      \resumeItemListStart
+        \resumeItem{Designed and built a \href{https://www.atillasaadat.com/post/winsat-rocketry-division-data-acquisition-module}{custom aerodynamics data acquisition module} using Raspberry Pi and a multi-sensor array, enabling precise in-flight aerodynamic analysis and performance validation}
+        \resumeItem{Integrated custom PCB design with embedded software and redundancy handling to reliably capture and process high-rate rocket telemetry including acceleration, angular velocity, and atmospheric conditions}
+      \resumeItemListEnd
+    \resumeSubheading
+      {CryoRoute - Globally Optimized Naval Routes in North Arctic Ocean}{Nov 2019}
+      {Independent Research Project}{}
+      \resumeItemListStart
+        \resumeItem{Developed a \href{https://www.atillasaadat.com/post/cryoroute-globally-optimized-naval-routes-in-north-arctic-ocean}{novel route optimization tool} for Arctic naval navigation, leveraging CryoSat-2 SAR sea ice freeboard data from the \href{http://www.cpom.ucl.ac.uk/csopr/seaice.php}{Center for Polar Observation and Modelling (CPOM)} to improve safety and transit efficiency}
+        \resumeItem{Implemented a tailored A* pathfinding algorithm minimizing sea ice thickness, distance, and transit duration to produce optimized Arctic shipping routes}
+        \resumeItem{Presented findings at NASA Space Apps Waterloo, UWIllDiscover Conference, and ESA's Atlantic from Space Workshop}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Demo. Inertial Electrostatic Confinement (IEC) Nuclear Fusion Reactor}{Aug 2015}
+      {Independent Research Project}{}
+      \resumeItemListStart
+        \resumeItem{\href{https://www.atillasaadat.com/post/demo-inertial-electrostatic-confinement-nuclear-fusion-reactor}{Designed and built a vacuum chamber} to simulate atmospheric gas ionization and plasma generation, replicating core processes of a deuterium-powered IEC nuclear fusion reaction}
+        \resumeItem{Operated a 15kV high-voltage power supply under strict safety protocols to maintain stable plasma conditions throughout experimentation}
+        \resumeItem{Characterized the relationship between internal grid geometry and plasma synthesis rates using visual luminescence techniques, laying groundwork for future neutron radiation simulations and fusion validation}
+      \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Electrical Lead / Safety Captain}{2014 -- 2015}
+    %   {\href{https://frc-events.firstinspires.org/team/4903}{FIRST Robotics Competition (FRC)} - Team 4903}{Vincent Massey Secondary School}
+    %   \resumeItemListStart
+    %     \resumeItem{Led electrical system design and mentored a team of 8 engineers, contributing to a \href{https://windsorstar.com/uncategorized/two-windsor-essex-teams-heading-to-world-robotics-championship}{\textbf{1st place finish}} at the Windsor-Essex Great Lakes Regional 2015 and advancement to the FRC World Championship}
+    %     \resumeItem{Established and enforced team-wide safety standards as Safety Captain, fostering a safety-first culture that supported consistent performance through regional and world-level competition}
+    %   \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------PROFESSIONAL TRAINING, CERTIFICATION, WORKSHOPS-----------
+\section[Professional Training \& Certification]{\shiftleft{18pt}{\cvIcon{\faCertificate}}Professional Training \& Certification}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Advanced and Intro Fprime Workshop Certification}{Feb 2026}
+      {\href{https://fprime.jpl.nasa.gov/}{NASA Jet Propulsion Laboratory}}{Pasadena, CA}
+    \resumeSubheading
+      {Nationally Registered Emergency Medical Technician}{Sept 2025}
+      {\href{https://www.nremt.org/}{National Registry of Emergency Medical Technicians (NREMT)} | EMS ID: 0538-7044-6794}{United States}
+    \resumeSubheading
+      {PADI Rescue Diver w/ Emergency First Response (EFR)}{Oct 2024}
+      {\href{https://www.padi.com/}{Professional Association of Diving Instructors (PADI)} | PADI\#24100Z7563}{Laguna Beach, CA}
+    \resumeSubheading
+      {Basic Life Support (CPR \& AED)}{Sept 2024}
+      {\href{https://cpr.heart.org/en/cpr-courses-and-kits/healthcare-professional/basic-life-support-bls-training}{American Heart Association} | HeartCode: \href{https://certificates.rqi1stop.com/certificates/us/verify_certificate}{qxnt7ou98it5egnskkbzmiku}}{United States}
+    \resumeSubheading
+      {PADI Advanced Open Water Diver}{Apr 2024}
+      {\href{https://www.padi.com/}{Professional Association of Diving Instructors (PADI)} | PADI\#24040J7449}{Laguna Beach, CA}
+      \resumeItemListStart
+        \resumeItem{Specialties: Deep Dive, Search \& Recovery, Peak Performance Buoyancy, U/W Navigation, U/W Naturalist}
+      \resumeItemListEnd
+    \resumeSubheading
+      {PADI Enriched Air Nitrox Diver}{Apr 2024}
+      {\href{https://www.padi.com/}{Professional Association of Diving Instructors (PADI)} | PADI\#24040I9443}{Laguna Beach, CA}
+    \resumeSubheading
+      {Wilderness Medicine - First Aid / Epinephrine Auto-injector}{Apr 2024}
+      {\href{https://www.nols.edu/en/wilderness-medicine/why-nols/}{NOLS Wilderness Medicine}}{Los Angeles, CA}
+    \resumeSubheading
+      {PADI Open Water Diver}{Feb 2024}
+      {\href{https://www.padi.com/}{Professional Association of Diving Instructors (PADI)} | PADI\#24020Q5071}{Laguna Beach, CA}
+    \resumeSubheading
+      {Canadian Amateur Radio Operator Certificate - Callsign: \href{https://bit.ly/atilla-saadat-callsign}{VA3UWS}}{Jan 2019}
+      {Innovation, Science and Economic Development Canada}{Government of Canada}
+      \resumeItemListStart
+        \resumeItem{Basic with Honours - Access to all amateur radio frequency bands}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Siemens NX Space Systems Thermal Training}{Feb 2019}
+      {CSDC Structural \& Thermal Analysis Workshop}{Magellan Aerospace, Winnipeg, Manitoba}
+      \resumeItemListStart
+        \resumeItem{Learned spacecraft structural and thermal analysis techniques for small satellites in Siemens NX}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------HACKATHON AWARDS-----------
+\section[Hackathon Projects \& Awards]{\shiftleft{18pt}{\cvIcon{\faCode}}Hackathon Projects \& Awards}
+  \resumeSubHeadingListStart
+    \vspace{3pt}
+    \resumeSubheading
+      {\href{https://devpost.com/software/gateway}{Gateway 2.0}}{2015}
+      {\href{https://www.facebook.com/hackathon/}{Facebook Global Hackathon}}{Facebook HQ, Menlo Park, CA}
+      \resumeItemListStart
+        \resumeItem{Improved developments on an iOS Messaging App with embedded API search query responses and natural language processing}
+      \resumeItemListEnd
+    \vspace{3pt}
+    \resumeSubheading
+      {\href{https://devpost.com/software/gateway}{Gateway}}{2015}
+      {MHacks 6}{University of Michigan, Ann Arbor, MI}
+      \resumeItemListStart
+        \resumeItem{Developed an iOS Messaging App with embedded API search query responses and natural language processing}
+        \resumeItem{\textbf{Awards}{\bf{: Best Use of Facebook Parse API (Invitation to Facebook Global Hackathon), Best iOS App (sponsored by Apple Inc.), Best Use of Expedia API}}}
+    \resumeItemListEnd
+    \vspace{3pt}
+    \resumeSubheading
+      {\href{http://devpost.com/software/lubdub}{Lubdub}}{2017}
+      {SpartaHacks III}{Michigan State University, East Lansing, MI}
+      \resumeItemListStart
+        \resumeItem{Developed a web application that records and detects heart defects using audio wave analysis and a stethoscope, achieving real-time diagnostic capabilities}
+        \resumeItem{\textbf{Awards}{\bf{: SpartaHacks 2\textsuperscript{nd} Place Winner, ThoughtWorks Honorable Mention}}}
+      \resumeItemListEnd
+    \vspace{3pt}
+    \resumeSubheading
+      {\href{https://www.epicentreuwindsor.ca/winter-hackathon-a-great-experience-for-uwindsor-students/}{GeoRisk}}{2017}
+      {Winter Hackathon}{University of Windsor, Windsor, Ontario}
+      \resumeItemListStart
+        \resumeItem{Developed a Google Maps web-based application to analyze client data for a sponsoring insurance company}
+        \resumeItem{\textbf{Awards}{\bf{: \href{https://epicentreuwindsor.ca/}{UWindsor EpiCentre Startup} Series-A Funding (\$6000) – Funds to \href{https://web.archive.org/web/20250101130253/https://www.winsat.ca/}{WinSAT}}}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+%-----------VOLUNTEERING and Organizations-----------
+\section[Professional Affiliations \& Community Engagement]{\shiftleft{18pt}{\cvIcon{\faUsers}}Professional Affiliations \& Community Engagement}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Aerospace Education Officer, 2d Lt}{Apr 2024 - Present}
+      {\href{https://sq232.cap.gov/}{Civil Air Patrol (CAP) - Squadron 232}}{Mission Viejo, CA}
+      \resumeItemListStart
+        \resumeItem{CAP ID\#727326. Deliver engaging STEM education through lectures, hands-on activities, and rocketry/Arduino projects to inspire cadets in aerospace and engineering fundamentals.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Programs Chair}{June 2024 - Present}
+      {\href{https://engage.aiaa.org/orangecounty/home}{American Institute of Aeronautics and Astronautics (AIAA) - Orange County Chapter}}{Orange County, CA}
+      \resumeItemListStart
+        \resumeItem{ID: \#1702953. Coordinate and host distinguished guest speakers to advance aerospace dialogue and professional development within the local AIAA community.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------MEDIA COVERAGE-----------
+\section[Media Coverage]{\shiftleft{18pt}{\cvIcon{\faNewspaper}}Media Coverage}
+    \vspace{2pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{\href{https://www.youtube.com/watch?v=jA6TNCRmeyM}{\underline{STARFIRE: FLEET COMMAND}}} $|$ \emph{Turion Space Corp.}}{Sept 2024}
+            \vspace{-15pt}
+
+        \resumeProjectHeading
+            {\textbf{\href{https://www.youtube.com/watch?v=sN7dJQUerlg}{\underline{Droid.001 Alpha Centauri Imaging}}} $|$ \emph{Turion Space Corp.}}{Jun 2024}
+            \vspace{-15pt}
+
+        \resumeProjectHeading
+            {\textbf{\href{https://www.youtube.com/watch?v=9FCYnzXmGR8}{\underline{Droid.001 Moon Image Results}}} $|$ \emph{Turion Space Corp.}}{Apr 2024}
+            \vspace{-15pt}
+        
+        \resumeProjectHeading
+            {\textbf{\href{https://www.youtube.com/watch?v=zQPRsL2FKRM}{\underline{Droid.001 Mission and Simulation Highlights}}} $|$ \emph{Turion Space Corp.}}{Sept 2023}
+            \vspace{-15pt}
+            
+        \resumeProjectHeading
+            {\textbf{\href{https://www.linkedin.com/posts/uoftengineering_uoftengineering-activity-6968939517860876288--XDv/}{\underline{Small Satellite Student Competition Award}}} $|$ \emph{University of Toronto Engineering Dept.}}{Aug 2022}
+            \vspace{-15pt}
+        \resumeProjectHeading
+            {\textbf{\href{http://www.uwindsor.ca/engineering/2019-11-01/uwindsor-satellite-design-leading-student-competition}{\underline{UWindsor satellite design leading student competition}}} $|$ \emph{University of Windsor Engineering Dept.}}{Nov 2019}
+            \vspace{-15pt}
+        \resumeProjectHeading
+            {\textbf{\href{https://windsorstar.com/news/local-news/uwindsor-space-and-aeronautics-team-wins-critical-satellite-design-review}{\underline{WinSAT wins critical satellite design review}}} $|$ \emph{Windsor Star – News Outlet}}{Nov 2019}
+            \vspace{-15pt}
+        \resumeProjectHeading
+            {\textbf{\href{http://www.uwindsor.ca/engineering/2019-07-02/aerospace-engineering-student-aiming-high}{\underline{Aerospace engineering student aiming high}}} $|$ \emph{University of Windsor Engineering Dept.}}{Aug 2019}
+            \vspace{-15pt}
+        \resumeProjectHeading
+            {\textbf{\href{https://www.uwindsor.ca/coop-workplace-partnerships/339/get-outta-town}{\underline{Mujin Inc. Internship - Student Spotlight}}} $|$ \emph{University of Windsor Co-operative Education Dept.}}{Oct 2018}
+            \vspace{-15pt}
+    \resumeSubHeadingListEnd
+\vspace{5pt}
+
+% %------RELEVANT COURSEWORK-------
+% \section[Hobbies and Interests]{\shiftleft{18pt}{\faGlobe}Hobbies \& Interests}
+%     %\resumeSubHeadingListStart
+%             \begin{itemize}[itemsep=-3pt, parsep=3pt]
+%                 \item Snowboarding, Scuba Diving, Hiking, Soccer, Volleyball, Programming Projects 
+%             \end{itemize}
+%     %\resumeSubHeadingListEnd
+% \vspace{-15pt}
+
+% %------References-------
+% \section[References]{\shiftleft{18pt}{\cvIcon{\faUsers}}References}
+%     %\resumeSubHeadingListStart
+%     \vspace{5pt}
+%         \begin{multicols}{2}
+%             \begin{itemize}[itemsep=-3pt, parsep=-3pt]
+%                 \small
+%                 \begin{minipage}{\columnwidth}
+%                 \item{Dr. Robert E. Zee, Ph.D.\newline 
+%                 Director, Space Flight Laboratory (SFL)\newline 
+%                 Microsatellite Science and Technology Center (MSTC)\newline 
+%                 University of Toronto Institute for Aerospace Studies\newline 
+%                 4925 Dufferin Street\newline 
+%                 Toronto, Ontario, Canada, M3H 5T6\newline 
+%                 Tel: +1 (416) 667-7864\newline
+%                 Email: \href{mailto:info@sflmissions.com}{info@sflmissions.com}\newline
+%                 Web: \href{https://sflmissions.com/}{sflmissions.com}\newline
+%                 }
+%                 \item{Dr. Rashid Rashidzadeh, Ph.D., P.Eng., SMIEEE\newline
+%                 Adjunct Professor \& Academic Planning Liaison\newline
+%                 Electrical \& Computer Engineering\newline
+%                 University of Windsor\newline
+%                 CEI 2168, 401 Sunset Ave\newline 
+%                 Windsor, ON, Canada N9B 3P4\newline
+%                 Tel: +1 (519) 253-3000 x3931\newline
+%                 Email: \href{mailto:rashidza@uwindsor.ca}{rashidza@uwindsor.ca}\newline
+%                 Web: \href{https://www.uwindsor.ca/engineering/electrical/322/dr-rashid-rashidzadeh}{uwindsor.ca/dr-rashid-rashidzadeh}\newline
+%                 }                
+%                 \end{minipage}
+%                 \begin{minipage}{\columnwidth}
+%                 \item{Dr. Afshin Rahimi, Ph.D., P.Eng.\newline
+%                 Assistant Professor\newline
+%                 Mechanical, Automotive \& Materials Engineering\newline
+%                 University of Windsor\newline
+%                 CEI 2174, 401 Sunset Ave\newline 
+%                 Windsor, ON, Canada N9B 3P4\newline
+%                 Tel: +1 (519) 253-3000 x5936\newline
+%                 Email: \href{mailto:afshin.rahimi@uwindsor.ca}{afshin.rahimi@uwindsor.ca}\newline
+%                 Web: \href{https://arahimi.ca}{arahimi.ca}\newline
+%                 }
+
+%                 \end{minipage}
+%             \end{itemize}
+%         \end{multicols}
+%         %\vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+
+%\end{comment}
+\end{document}
