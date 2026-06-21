@@ -18,6 +18,18 @@ jobs:
           root_file: main.tex
           # latexmk_use_xelatex: true   # uncomment if your CV uses fontspec/custom fonts
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check CV hyperlinks (fails build on dead links)
+        # Parses every \href / \url in main.tex and verifies each URL.
+        # DEAD links (404/410, unreachable host) fail the build and block publish.
+        # WARN links (anti-bot 403/999, SSL, transient 5xx) are reported but don't fail.
+        # To also fail on WARN, set CHECK_LINKS_FAIL_ON_WARN=1 below.
+        run: python3 scripts/check_links.py main.tex
+
       - name: Publish PDF to website repo
         env:
           TOKEN: ${{ secrets.WEBSITE_REPO_TOKEN }}
